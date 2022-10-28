@@ -1,0 +1,27 @@
+html, body{ 
+    font-family: 'Pretendard', sans-serif;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#video{
+    width: 100vw;
+    height: 100vh;
+}
+
+#page-main .sub-title{
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+}
+
+#page-main .title{
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-top: 0;
+    padding: 0;
+}
