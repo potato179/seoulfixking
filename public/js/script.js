@@ -1,10 +1,10 @@
-new fullpage('#fullpage', {
+new fullpage("#fullpage", {
     sectionsColor: ["black", "white"],
     licenseKey: "1NKKK-0T7RK-0CH28-MWNGH-RJOMM",
 });
 
-const elem = document.querySelector('#nav-bg'),
-    toggleBtn = document.querySelector('#toggle-btn'),
+const elem = document.querySelector("#nav-bg"),
+    toggleBtn = document.querySelector("#toggle-btn"),
     elemH = elem.getBoundingClientRect().height,
     elemW = elem.getBoundingClientRect().width;
 
