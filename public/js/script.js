@@ -94,28 +94,6 @@ function searchPrice(){
     var phone_list = ["아이폰 SE(1세대)", "아이폰 SE(2세대)", "아이폰 SE(3세대)", "아이폰 5", "아이폰 5C", "아이폰 5S", "아이폰 6", "아이폰 6 Plus", "아이폰 6S", "아이폰 6S Plus", "아이폰 7", "아이폰 7 Plus", "아이폰 8", "아이폰 8 Plus", "아이폰 X", "아이폰 XS", "아이폰 XS MAX", "아이폰 XR", "아이폰 11", "아이폰 11 Pro", "아이폰 11 Pro MAX", "아이폰 12 mini", "아이폰 12", "아이폰 12 Pro", "아이폰 12 Pro MAX", "아이폰 13 mini", "아이폰 13", "아이폰 13 Pro", "아이폰 13 Pro MAX"];
     var parts_list = ["정품 액정", "재생 액정", "OLED 카피 액정", "LCD 카피 액정", "표준용량 배터리", "대용량 배터리", "하우징", "독커넥터", "탭틱엔진", "전면 카메라", "후면 카메라", "수화부 스피커", "하단 스피커", "볼륨 케이블", "전원 케이블", "무선충전 모듈", "듀얼심 개조", "메인보드 수리"];
 
-    console.log(price_list[selected_phone][selected_parts])
-    if(selected_phone == 0 || selected_phone == 1 || selected_phone == 2 || selected_phone == 3 || selected_phone == 4 || selected_phone == 5 || selected_phone == 8 || selected_phone == 10 || selected_phone == 11 || selected_phone == 12 || selected_phone == 13){
-        if(selected_parts == 13 || selected_parts == 14){
-            alert("아이폰 SE(1세대), SE(2세대), SE(3세대), 5, 5C, 5S, 6S, 7, 7 Plus, 8, 8 Plus는 볼륨 케이블과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 볼륨 케이블을 선택하시기 바랍니다.");
-        }
-    }
-    if(selected_phone == 14 || selected_phone == 15 || selected_phone == 16 || selected_phone == 19 || selected_phone == 20){
-        if(selected_parts == 13 || selected_parts == 15){
-            alert("아이폰 X, XS, XS MAX, 11 Pro, 11 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
-        }
-    }
-    if(selected_phone == 17){
-        if(selected_parts == 14 || selected_parts == 15){
-            alert("아이폰 XR은 무선충전 모듈과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
-        }
-    }
-    if(selected_phone == 21 || selected_phone == 22 || selected_phone == 23 || selected_phone == 24 || selected_phone == 25 || selected_phone == 26 || selected_phone == 27 || selected_phone == 28){
-        if(selected_parts == 13 || selected_parts == 14 || selected_parts == 15){
-            alert("아이폰 12 mini, 12, 12 Pro, 12 Pro MAX, 13 mini, 13, 13 Pro, 13 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
-        }
-    }
-
     var price_ment;
     if(selected_parts == 0){
         price_ment = `${phone_list[selected_phone]} 정품 액정: <span class = "text-red">${price_list[selected_phone][0]}</span>원<br>${phone_list[selected_phone]} 재생 액정: <span class = "text-red">${price_list[selected_phone][1]}</span>원<br>`;
@@ -137,6 +115,31 @@ function searchPrice(){
             price_ment = `${phone_list[selected_phone]} ${parts_list[selected_parts]}: <span class = "text-red">${price_list[selected_phone][selected_parts]}</span>원<br>* 모든 부품 정품 부품을 사용합니다.`
         }
     }
+
+    if(selected_phone == 0 || selected_phone == 1 || selected_phone == 2 || selected_phone == 3 || selected_phone == 4 || selected_phone == 5 || selected_phone == 8 || selected_phone == 10 || selected_phone == 11 || selected_phone == 12 || selected_phone == 13){
+        if(selected_parts == 13 || selected_parts == 14){
+            alert("아이폰 SE(1세대), SE(2세대), SE(3세대), 5, 5C, 5S, 6S, 7, 7 Plus, 8, 8 Plus는 볼륨 케이블과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 볼륨 케이블을 선택하시기 바랍니다.");
+            if(price_list[selected_phone][selected_parts] == "해당없음") price_ment = `${phone_list[selected_phone]}은(는) 볼륨 케이블과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 볼륨 케이블을 선택하시기 바랍니다.`;
+        }
+    }
+    if(selected_phone == 14 || selected_phone == 15 || selected_phone == 16 || selected_phone == 19 || selected_phone == 20){
+        if(selected_parts == 13 || selected_parts == 15){
+            alert("아이폰 X, XS, XS MAX, 11 Pro, 11 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+            if(price_list[selected_phone][selected_parts] == "해당없음") price_ment = `${phone_list[selected_phone]}은(는) 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.`;
+        }
+    }
+    if(selected_phone == 17){
+        if(selected_parts == 14 || selected_parts == 15){
+            alert("아이폰 XR은 무선충전 모듈과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+            if(price_list[selected_phone][selected_parts] == "해당없음") price_ment = `${phone_list[selected_phone]}은(는) 무선충전 모듈과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.`;
+        }
+    }
+    if(selected_phone == 21 || selected_phone == 22 || selected_phone == 23 || selected_phone == 24 || selected_phone == 25 || selected_phone == 26 || selected_phone == 27 || selected_phone == 28){
+        if(selected_parts == 13 || selected_parts == 14 || selected_parts == 15){
+            alert("아이폰 12 mini, 12, 12 Pro, 12 Pro MAX, 13 mini, 13, 13 Pro, 13 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+        }
+    }
+
     document.getElementById("parts-pricing").innerHTML = price_ment;
 
     if(selected_parts >= 0 && selected_parts <= 5 || selected_parts >= 8 && selected_parts <= 12 || selected_parts == 16){
