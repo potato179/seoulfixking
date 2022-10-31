@@ -116,14 +116,19 @@ function searchPrice(){
         }
     }
 
-    console.log(`${phone_list[selected_phone]} ${parts_list[selected_parts]}`, selected_phone, selected_parts)
-
     var price_ment;
-    if(price_list[selected_phone][selected_parts] === "품절"){
-        price_ment = `<span class = "text-red">제고확보 중</span>`;
+    if(selected_parts == 0){
+        price_ment = `${phone_list[selected_phone]} 정품 액정: <span class = "text-red">${price_list[selected_phone][0]}</span>원<br>${phone_list[selected_phone]} 재생 액정: <span class = "text-red">${price_list[selected_phone][1]}</span>원<br>`;
+        if(price_list[selected_phone][2] !== "해당없음") price_ment += `${phone_list[selected_phone]} OLED 카피 액정: <span class = "text-red">${price_list[selected_phone][2]}</span>원<br>`;
+        price_ment += `${phone_list[selected_phone]} LCD 카피 액정: <span class = "text-red">${price_list[selected_phone][3]}</span>원<br>`;
     }
     else{
-        price_ment = `${phone_list[selected_phone]} ${parts_list[selected_parts]}: <span class = "text-red">${price_list[selected_phone][selected_parts]}</span>원<br>* 모든 부품 정품 부품을 사용합니다.`
+        if(price_list[selected_phone][selected_parts] === "품절"){
+            price_ment = `<span class = "text-red">제고확보 중</span>`;
+        }
+        else{
+            price_ment = `${phone_list[selected_phone]} ${parts_list[selected_parts]}: <span class = "text-red">${price_list[selected_phone][selected_parts]}</span>원<br>* 모든 부품 정품 부품을 사용합니다.`
+        }
     }
     document.getElementById("parts-pricing").innerHTML = price_ment;
 }
