@@ -11,6 +11,27 @@ html, body{
     padding: 0;
 }
 
+#scroll-page{
+    margin-top: 10rem;
+    width: 100%;
+}
+
+#scroll-page .sub-title{
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    margin-bottom: 0;
+}
+
+#scroll-page .title{
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
 #page-main .sub-title{
     font-size: 1.5rem;
     text-align: center;
@@ -312,8 +333,20 @@ img {
     width: 100%;
 }
 
-select{
+select, #searchPriceButton{
     display: block;
     margin: auto;
-    width: 18rem;
+    width: 75%;
+    height: 3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+#select_phone{
+    margin-top: 3.5rem;
+}
+
+#select_parts, #searchPriceButton{
+    margin-top: 0.5rem;
 }
