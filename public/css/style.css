@@ -11,11 +11,6 @@ html, body{
     padding: 0;
 }
 
-#video{
-    width: 100vw;
-    height: 100vh;
-}
-
 #page-main .sub-title{
     font-size: 1.5rem;
     text-align: center;
@@ -315,4 +310,10 @@ img {
     vertical-align: middle;
     height: auto;
     width: 100%;
+}
+
+select{
+    display: block;
+    margin: auto;
+    width: 18rem;
 }
