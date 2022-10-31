@@ -11,6 +11,10 @@ html, body{
     padding: 0;
 }
 
+.text-red{
+    color: red;
+}
+
 #scroll-page{
     margin-top: 10rem;
     width: 100%;
@@ -358,6 +362,6 @@ select, #searchPriceButton{
     margin-top: 3.5rem;
     margin-bottom: 10rem;
     width: 75%;
-    height: 10rem;
     border-radius: 1rem;
+    padding: 1.5rem;
 }
