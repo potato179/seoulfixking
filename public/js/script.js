@@ -76,8 +76,8 @@ function searchPrice(){
         [103700, 93600, 67200, 49200, 22500, 25500, 60000, 17600, 21000, 23000, 60000, 11900, 9900, "해당없음", 10000, 25400, "해당없음"], //아이폰 X
         [111700, 94800, 68400, 50400, 27500, 30500, 60000, 18600, 23200, 23000, 65000, 12800, 12000, "해당없음", 10000, 29400, "해당없음"], //아이폰 XS
         [175100, 154800, 99600, 64800, 31000, "품절", 65000, 19700, 23600, 23000, 65000, 17800, 12000, "해당없음", 10000, 30400, "해당없음"], //아이폰 XSM
-        [84900, 67200, "해당없음", 52800, 24000, "품절", 65000, 18600, 23600, 23000, 55000, 14000, 12900, 17100, "해당없음", 23000, "12000"], //아이폰 XR
-        [89500, 70800, "해당없음", 57600, 32500, 35500, 70000, 36800, 24200, 23000, 67500, 21000, 17500, 12400, 12400, 17500, "20000"], //아이폰 11
+        [84900, 67200, "해당없음", 52800, 24000, "품절", 65000, 18600, 23600, 23000, 55000, 14000, 12900, 17100, "해당없음", 23000, 13000], //아이폰 XR
+        [89500, 70800, "해당없음", 57600, 32500, 35500, 70000, 36800, 24200, 23000, 67500, 21000, 17500, 12400, 12400, 17500, 20000], //아이폰 11
         [134600, 100800, 91200, 63600, 39500, "품절", 70000, 67700, 24800, 23000, 95000, 22000, 22900, "해당없음", "품절", 29400, "품절"], //아이폰 11Pro
         [263400, 189600, 110400, 91200, "품절", "품절", 70000, 67700, 24800, 23000, 95000, 34000, 22900, "해당없음", "품절", 29400, "품절"], //아이폰 11ProM
         ["품절", "품절", 156000, 127000, 31500, 34500, 80000, "품절", "품절", "품절", "품절", "품절", "품절", "해당없음", "해당없음", "품절", "품절"], //아이폰 12mini
@@ -92,4 +92,24 @@ function searchPrice(){
     var selected_phone = document.getElementById("select_phone").value;
     var selected_parts = document.getElementById("select_parts").value;
     console.log(price_list[selected_phone][selected_parts])
+    if(selected_phone == 0 || selected_phone == 1 || selected_phone == 2 || selected_phone == 3 || selected_phone == 4 || selected_phone == 5 || selected_phone == 8 || selected_phone == 10 || selected_phone == 11 || selected_phone == 12 || selected_phone == 13){
+        if(selected_parts == 13 || selected_parts == 14){
+            alert("아이폰 SE(1세대), SE(2세대), SE(3세대), 5, 5C, 5S, 6S, 7, 7 Plus, 8, 8 Plus는 볼륨 케이블과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 볼륨 케이블을 선택하시기 바랍니다.");
+        }
+    }
+    if(selected_phone == 14 || selected_phone == 15 || selected_phone == 16 || selected_phone == 19 || selected_phone == 20){
+        if(selected_parts == 13 || selected_parts == 15){
+            alert("아이폰 X, XS, XS MAX, 11 Pro, 11 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+        }
+    }
+    if(selected_phone == 17){
+        if(selected_parts == 14 || selected_parts == 15){
+            alert("아이폰 XR은 무선충전 모듈과 전원 케이블이 일체형입니다. 전원 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+        }
+    }
+    if(selected_phone == 21 || selected_phone == 22 || selected_phone == 23 || selected_phone == 24 || selected_phone == 25 || selected_phone == 26 || selected_phone == 27 || selected_phone == 28){
+        if(selected_parts == 13 || selected_parts == 14 || selected_parts == 15){
+            alert("아이폰 12 mini, 12, 12 Pro, 12 Pro MAX, 13 mini, 13, 13 Pro, 13 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+        }
+    }
 }
