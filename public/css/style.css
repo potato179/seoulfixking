@@ -365,3 +365,7 @@ select, #searchPriceButton{
     border-radius: 1rem;
     padding: 1.5rem;
 }
+
+#parts-pricing, #service-pricing{
+    margin-top: 0.5rem;
+}
