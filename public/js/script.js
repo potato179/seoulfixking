@@ -3,10 +3,10 @@ new fullpage("#fullpage", {
     licenseKey: "1NKKK-0T7RK-0CH28-MWNGH-RJOMM",
 });
 
-const elem = document.querySelector("#nav-bg"),
-    toggleBtn = document.querySelector("#toggle-btn"),
-    elemH = elem.getBoundingClientRect().height,
-    elemW = elem.getBoundingClientRect().width;
+const elem = document.querySelector("#nav-bg");
+const toggleBtn = document.querySelector("#toggle-btn");
+const elemH = elem.getBoundingClientRect().height;
+const elemW = elem.getBoundingClientRect().width;
 
 let open = false;
 let scale, offsetX, offsetY;
@@ -54,5 +54,5 @@ const resizeHandler = () => {
 
 calculateValues();
 
-toggleBtn.addEventListener('click', toggleMenu, false);
+toggleBtn.addEventListener("click", toggleMenu, false);
 window.addEventListener("resize", resizeHandler, false);

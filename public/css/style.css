@@ -4,6 +4,12 @@ html, body{
     width: 100vw;
     height: 100vh;
 }
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 #video{
     width: 100vw;
@@ -103,9 +109,8 @@ html, body{
     margin-top: 8px;
 }
   
-#toggle-btn span:before,
-#toggle-btn span:after {
-    content: '';
+#toggle-btn span:before, #toggle-btn span:after {
+    content: "";
     position: absolute;
     top: 0;
     background: currentColor;
@@ -113,7 +118,7 @@ html, body{
     height: 100%;
     width: 50%;
     height: 4px;
-    transition: .25s cubic-bezier(.6,0,.3,1);
+    transition: .25s cubic-bezier(.6, 0, .3, 1);
     transform-origin: center center;
 }
   
@@ -176,7 +181,7 @@ html, body{
 }
 
 #toggle-btn:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -289,12 +294,6 @@ nav li+li {
     margin: auto;
     color: white;
     text-shadow: 0 6px 18px rgba(0, 0, 0, .1);
-}
-  
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 a, a:visited, a:focus, a:active, a:link {
