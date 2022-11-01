@@ -105,7 +105,7 @@ function searchPrice(){
     }
     else if(selected_parts == 17){
         price_ment = "";
-        document.getElementById("service-pricing").innerHTML = `수리 비용: <span class = "text-red">${price_list[selected_phone][17]}</span>원 부터<br>메인보드 수리는 직접 물품을 받고난 뒤 정확한 견적이 나옵니다.`;
+        document.getElementById("service-pricing").innerHTML = `수리 비용: <span class = "text-red">${price_list[selected_phone][17]}</span>원 부터<br>메인보드 수리는 직접 물품을 받고난 뒤 정확한 견적이 나옵니다.<br>* 침수/사설수리 흔적 심할 시 10000원 추가`;
     }
     else{
         if(price_list[selected_phone][selected_parts] === "품절"){
@@ -143,12 +143,12 @@ function searchPrice(){
     document.getElementById("parts-pricing").innerHTML = price_ment;
 
     if(selected_parts >= 0 && selected_parts <= 5 || selected_parts >= 8 && selected_parts <= 12 || selected_parts == 16){
-        document.getElementById("service-pricing").innerHTML = `수리 대행이 필요하신가요? 부품값과 함께 아래 공임비를 지불하시고, 물품을 보내주시면 직접 수리해드립니다. <br>공임비: <span class = "text-red">10000</span>원`;
+        document.getElementById("service-pricing").innerHTML = `수리 대행이 필요하신가요? 부품값과 함께 아래 공임비를 지불하시고, 물품을 보내주시면 직접 수리해드립니다. <br>공임비: <span class = "text-red">10000</span>원<br>* 침수/사설수리 흔적 심할 시 10000원 추가`;
     }
     else if(selected_parts == 17){
         console.log("GayJoyGo");
     }
     else{
-        document.getElementById("service-pricing").innerHTML = `수리 대행이 필요하신가요? 부품값과 함께 아래 공임비를 지불하시고, 물품을 보내주시면 직접 수리해드립니다. <br>공임비: <span class = "text-red">20000</span>원`;
+        document.getElementById("service-pricing").innerHTML = `수리 대행이 필요하신가요? 부품값과 함께 아래 공임비를 지불하시고, 물품을 보내주시면 직접 수리해드립니다. <br>공임비: <span class = "text-red">20000</span>원<br>* 침수/사설수리 흔적 심할 시 10000원 추가`;
     }
 }
