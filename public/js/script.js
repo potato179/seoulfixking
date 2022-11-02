@@ -139,6 +139,7 @@ function searchPrice(){
     if(selected_phone == 21 || selected_phone == 22 || selected_phone == 23 || selected_phone == 24 || selected_phone == 25 || selected_phone == 26 || selected_phone == 27 || selected_phone == 28){
         if(selected_parts == 13 || selected_parts == 14 || selected_parts == 15){
             alert("아이폰 12 mini, 12, 12 Pro, 12 Pro MAX, 13 mini, 13, 13 Pro, 13 Pro MAX는 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.");
+            if(price_list[selected_phone][selected_parts] == "해당없음") price_ment = `${phone_list[selected_phone]}은(는) 무선충전 모듈과 볼륨 케이블이 일체형입니다. 볼륨 케이블 교체 시 무선충전 모듈을 선택하시기 바랍니다.`;
         }
     }
 
